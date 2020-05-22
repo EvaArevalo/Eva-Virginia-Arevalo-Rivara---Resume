@@ -6,11 +6,11 @@
 
 @media (min-width: 300px) {
   .header-container-top {
-      max-width: 80rem;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 64rem;
       align-self:center;
       display: flex;
+      margin-right: auto;
+      margin-left:auto;
   }
 }
 
@@ -27,7 +27,6 @@
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 1rem;
   }
 
 .header-container-img{
@@ -247,6 +246,7 @@ section.resume-section .resume-item .resume-date {
 section .resume-date{
   float:right;
   align-self:right;
+  margin-top:1rem;
 }
 
 section.resume-section {
@@ -282,16 +282,20 @@ a:hover, a:focus, a:active {
 
 .header-githubbutton{
   display:flex;
+  justify-content: space-between;
   padding-top: 1rem;
   float: right;
-  width: 50%;
+  width: 22%;
   max-height: 15vh;
+  min-height: 15vh;
   flex-direction: right;
+  margin-left: auto;
 
 }
 
-.btn {
-
+.btn_gh {
+  display: flex; 
+  justify-content: space-between;
   color: rgba(255, 255, 255, 0.8); 
   background-color: #009999; 
   border-color: rgba(255, 255, 255, 0.2); 
@@ -301,9 +305,13 @@ a:hover, a:focus, a:active {
   background-color 0.2s, 
   border-color 0.2s; 
   align-self:right;
+  margin-bottom: 0.5rem;
+  max-height: 7vh;
+  min-height: 7vh;
+  padding: 0.75rem 0.5rem;
 }
 
-.btn:hover { 
+.btn_gh:hover { 
   color: rgba(255, 255, 255, 0.8); 
   text-decoration: none; 
   background-color: #159957; 
