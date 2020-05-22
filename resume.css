@@ -1,8 +1,61 @@
-/*!
- * Start Bootstrap - Resume v5.0.8 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
+.page-header { color: #fff; text-align: center; background-color: #159957; background-image: linear-gradient(120deg, #155799, #159957); display:flex;}
+@media screen and (min-width: 64em) { .page-header { padding: 3rem 2rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
+
+
+@media (min-width: 300px) {
+  .header-container-top {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+      align-self:center;
+      display: flex;
+  }
+}
+
+@media (min-width: 300px) { 
+  .header-container-img {
+    min-height: 20vh;
+  }
+  .header-container{
+    min-width: 18rem;
+  }
+}
+
+.img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+  }
+
+.header-container-img{
+  float: left;
+  width: 22%;
+}
+
+.header-container{
+  display:flex;
+  flex-direction:row;
+  flex-flow:row nowrap;
+  width:90%;
+  margin-left:3rem;
+  flex-wrap: wrap;
+}
+
+.header-container-text{
+  display: flex;
+  float: left;
+  width: 50%;
+  max-height: 15vh;
+}
+
+.social-icons-header{
+  display: flex;
+  float: left;
+  max-height: 10vh;
+}
 
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -14,6 +67,29 @@ body {
   body {
     padding-top: 0;
   }
+}
+
+.bg-primary {
+  background-color: #009999 !important;
+}
+
+.text-primary {
+  color: #009999 !important;
+}
+
+.date-text {
+  color: #009999 !important;
+  align-self:right;
+}
+
+.project-name {
+  color: #f5f3f0 !important;
+  float:left;
+}
+
+.project-tagline {
+  color: #f5f3f0 !important;
+  float:left;
 }
 
 h1,
@@ -29,13 +105,14 @@ h6 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 5.5rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-color: #009999;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -101,12 +178,36 @@ p.lead {
   transition: all .2s ease-in-out; 
 }
 
-.dev-icons {
-  font-size: 3rem;
+.social-icons-header a {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  margin-right: 1rem;
 }
 
-.dev-icons .list-inline-item i:hover {
-  color: #009999;
+.social-icons-header a:last-child {
+  margin-right: 0;
+}
+
+.social-icons-header a:hover {
+  background-color: #ffffff;
+  transform: scale(1.3);
+  transition: all .2s ease-in-out; 
+}
+
+.checklistcontainer2cols{
+  margin-top: 1rem;
+  display:flex;
+}
+
+.checklistcontainer4cols{
+  margin-top: 1rem;
+  display:flex;
 }
 
 .checklistdiv2col {
@@ -117,10 +218,6 @@ p.lead {
 .checklistdiv4col {
   float: left;
   width: 33%;
-}
-
-.checklistcontainer4cols{
-  margin-top: 3rem;
 }
 
 .fa-ul{
@@ -136,88 +233,31 @@ p.lead {
   color: #495057;
 }
 
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-
-#sideNav .navbar-toggler:focus {
-  outline-color: #85e0e0;
-}
-
-@media (min-width: 992px) {
-  #sideNav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    height: 100vh;
-  }
-  #sideNav .navbar-brand {
-    display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
-  }
-  #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
-  #sideNav .navbar-collapse {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: auto;
-  }
-  #sideNav .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
-}
-
 section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  max-width: 80rem;
 }
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
+  align-self:right;
+  min-width: 18rem;
+}
+section .resume-date{
+  float:right;
+  align-self:right;
 }
 
-@media (min-width: 768px) {
+section.resume-section {
+    min-height: 50vh;
+}
+
+@media (min-width: 300px) {
   section.resume-section {
-    min-height: 100vh;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-}
-
-.bg-primary {
-  background-color: #009999 !important;
-}
-
-.text-primary {
-  color: #009999 !important;
 }
 
 a {
@@ -226,4 +266,46 @@ a {
 
 a:hover, a:focus, a:active {
   color: #004d4d;
+}
+
+.footer-div{
+  display:flex;
+
+
+}
+
+.footer-text{
+  margin-bottom: 1rem;
+  height:15vh;
+  width:60%;
+}
+
+.header-githubbutton{
+  display:flex;
+  padding-top: 1rem;
+  float: right;
+  width: 50%;
+  max-height: 15vh;
+  flex-direction: right;
+
+}
+
+.btn {
+
+  color: rgba(255, 255, 255, 0.8); 
+  background-color: #009999; 
+  border-color: rgba(255, 255, 255, 0.2); 
+  border-style: solid; border-width: 1px; 
+  border-radius: 0.3rem; 
+  transition: color 0.2s, 
+  background-color 0.2s, 
+  border-color 0.2s; 
+  align-self:right;
+}
+
+.btn:hover { 
+  color: rgba(255, 255, 255, 0.8); 
+  text-decoration: none; 
+  background-color: #159957; 
+  border-color: #159957; 
 }
