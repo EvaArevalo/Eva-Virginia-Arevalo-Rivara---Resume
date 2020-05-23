@@ -11,16 +11,21 @@
       display: flex;
       margin-right: auto;
       margin-left:auto;
+      margin-top:2rem;
+      margin-bottom:2rem;
   }
 }
 
 @media (min-width: 300px) { 
-  .header-container-img {
-    min-height: 20vh;
-  }
-  .header-container{
-    min-width: 18rem;
-  }
+  .img-profile {
+      max-width: 10rem;
+      max-height: 10rem;
+      border: 0.5rem solid rgba(255, 255, 255, 0.2);
+      min-height: 10rem;
+      min-width: 10rem;
+      margin-top:auto;
+      margin-bottom: auto;
+    }
 }
 
 .img-profile {
